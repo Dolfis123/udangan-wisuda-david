@@ -430,7 +430,8 @@
         22: "OAP TEKOM 21",
       };
       var id = GetURLParameter("id");
-      document.getElementById("undang").innerHTML = undang[id];
+      document.getElementById("undang").innerHTML =
+        undang[id] || "nomor tidak ditemukan";
 
       if (id == "202407290") {
         document.getElementById("mhs").innerHTML = "";
@@ -467,7 +468,7 @@
         if (validIDs.includes(inputID)) {
           window.location.href = window.location.href + "?id=" + inputID;
         } else {
-          alert("NIM yang dimasukkan tidak ada pada daftar undangan.");
+          alert("nomor urut yang dimasukkan tidak ada pada daftar undangan.");
         }
       }
 
